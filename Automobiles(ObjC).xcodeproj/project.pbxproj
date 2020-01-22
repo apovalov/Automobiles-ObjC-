@@ -3,18 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		DB0978C4EB42E5AF70FD7FCE /* Pods_Automobiles_ObjC_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C660586DA9A759B0E90B32DF /* Pods_Automobiles_ObjC_.framework */; };
 		FA8191E523D795820010ECE4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8191E423D795820010ECE4 /* AppDelegate.m */; };
 		FA8191E823D795820010ECE4 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8191E723D795820010ECE4 /* SceneDelegate.m */; };
-		FA8191EB23D795820010ECE4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8191EA23D795820010ECE4 /* ViewController.m */; };
 		FA8191EE23D795820010ECE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA8191EC23D795820010ECE4 /* Main.storyboard */; };
 		FA8191F023D795840010ECE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA8191EF23D795840010ECE4 /* Assets.xcassets */; };
 		FA8191F323D795840010ECE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA8191F123D795840010ECE4 /* LaunchScreen.storyboard */; };
 		FA8191F623D795840010ECE4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8191F523D795840010ECE4 /* main.m */; };
+		FA8191FE23D81AD40010ECE4 /* Brand.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8191FD23D81AD40010ECE4 /* Brand.m */; };
+		FA81920523D82E340010ECE4 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA81920423D82E340010ECE4 /* MainViewController.m */; };
+		FA81920823D835FF0010ECE4 /* AutoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA81920723D835FF0010ECE4 /* AutoTableViewCell.m */; };
+		FA81920B23D84E930010ECE4 /* Networking.m in Sources */ = {isa = PBXBuildFile; fileRef = FA81920A23D84E930010ECE4 /* Networking.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,13 +29,21 @@
 		FA8191E423D795820010ECE4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FA8191E623D795820010ECE4 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		FA8191E723D795820010ECE4 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		FA8191E923D795820010ECE4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FA8191EA23D795820010ECE4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FA8191ED23D795820010ECE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA8191EF23D795840010ECE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA8191F223D795840010ECE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA8191F423D795840010ECE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA8191F523D795840010ECE4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FA8191FC23D81AD40010ECE4 /* Brand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Brand.h; sourceTree = "<group>"; };
+		FA8191FD23D81AD40010ECE4 /* Brand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Brand.m; sourceTree = "<group>"; };
+		FA81920323D82E340010ECE4 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		FA81920423D82E340010ECE4 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		FA81920623D835FF0010ECE4 /* AutoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoTableViewCell.h; sourceTree = "<group>"; };
+		FA81920723D835FF0010ECE4 /* AutoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoTableViewCell.m; sourceTree = "<group>"; };
+		FA81920923D84E930010ECE4 /* Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
+		FA81920A23D84E930010ECE4 /* Networking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Networking.m; sourceTree = "<group>"; };
+		FA81921123D87D000010ECE4 /* UIViewController+Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Utils.h"; sourceTree = "<group>"; };
+		FA81921223D87D000010ECE4 /* UIViewController+Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Utils.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +64,6 @@
 				748405DC809610953EA5A994 /* Pods-Automobiles(ObjC).debug.xcconfig */,
 				0C070B78F10B0BE61122E547 /* Pods-Automobiles(ObjC).release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -90,15 +100,63 @@
 				FA8191E423D795820010ECE4 /* AppDelegate.m */,
 				FA8191E623D795820010ECE4 /* SceneDelegate.h */,
 				FA8191E723D795820010ECE4 /* SceneDelegate.m */,
-				FA8191E923D795820010ECE4 /* ViewController.h */,
-				FA8191EA23D795820010ECE4 /* ViewController.m */,
+				FA81920E23D84EB80010ECE4 /* Controller */,
+				FA81920F23D84EC00010ECE4 /* Services */,
+				FA81920D23D84EAE0010ECE4 /* View */,
+				FA8191FF23D8232F0010ECE4 /* Model */,
 				FA8191EC23D795820010ECE4 /* Main.storyboard */,
 				FA8191EF23D795840010ECE4 /* Assets.xcassets */,
 				FA8191F123D795840010ECE4 /* LaunchScreen.storyboard */,
 				FA8191F423D795840010ECE4 /* Info.plist */,
 				FA8191F523D795840010ECE4 /* main.m */,
+				FA81921023D87CF70010ECE4 /* Extensions */,
 			);
 			path = "Automobiles(ObjC)";
+			sourceTree = "<group>";
+		};
+		FA8191FF23D8232F0010ECE4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA8191FC23D81AD40010ECE4 /* Brand.h */,
+				FA8191FD23D81AD40010ECE4 /* Brand.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FA81920D23D84EAE0010ECE4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA81920623D835FF0010ECE4 /* AutoTableViewCell.h */,
+				FA81920723D835FF0010ECE4 /* AutoTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA81920E23D84EB80010ECE4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA81920323D82E340010ECE4 /* MainViewController.h */,
+				FA81920423D82E340010ECE4 /* MainViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FA81920F23D84EC00010ECE4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FA81920923D84E930010ECE4 /* Networking.h */,
+				FA81920A23D84E930010ECE4 /* Networking.m */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FA81921023D87CF70010ECE4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FA81921123D87D000010ECE4 /* UIViewController+Utils.h */,
+				FA81921223D87D000010ECE4 /* UIViewController+Utils.m */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,9 +273,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA8191EB23D795820010ECE4 /* ViewController.m in Sources */,
+				FA81920823D835FF0010ECE4 /* AutoTableViewCell.m in Sources */,
+				FA8191FE23D81AD40010ECE4 /* Brand.m in Sources */,
 				FA8191E523D795820010ECE4 /* AppDelegate.m in Sources */,
+				FA81920B23D84E930010ECE4 /* Networking.m in Sources */,
 				FA8191F623D795840010ECE4 /* main.m in Sources */,
+				FA81920523D82E340010ECE4 /* MainViewController.m in Sources */,
 				FA8191E823D795820010ECE4 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
