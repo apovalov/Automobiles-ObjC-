@@ -16,6 +16,6 @@
 
 - (void)showAlertWithTitle:(NSString *)title
                    message:(NSString *)message
-                   handler:(void(^)())handler;
+                   handler:(void(^)(void))handler;
 
 @end

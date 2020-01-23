@@ -8,6 +8,7 @@
 
 #import "Networking.h"
 #import "Brand.h"
+#import "Car.h"
 #import "AFNetworking/AFNetworking.h"
 
 @interface Networking()
@@ -42,7 +43,35 @@
         NSLog(@"Error: %@", error.localizedDescription);
         handler(error.localizedDescription, nil);
     }];
+}
+
++ (void) getCars: (void(^)(id errorMsg, id response))handler {
     
+    NSLog(@"Something handeling");
+    NSString *url = @"http://www.mocky.io/v2/5db9630530000095005ee272";
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    [manager GET: url
+          parameters: nil
+            progress: nil
+             success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        if (responseObject[@"data"]) {
+            
+            NSMutableArray *brands = [NSMutableArray array];
+            NSArray *cars_response = responseObject[@"data"];
+            if ([cars_response isKindOfClass:[NSArray class]]) {
+                for (int i = 0; i < cars_response.count; i++) {
+                    Car *car = [Car parseResponse: cars_response[i]];
+                    [brands addObject: car];
+                }
+            }
+            
+            handler(nil, brands);
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"Error: %@", error.localizedDescription);
+        handler(error.localizedDescription, nil);
+    }];
 }
 
 

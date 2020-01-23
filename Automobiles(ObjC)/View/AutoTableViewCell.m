@@ -8,6 +8,7 @@
 
 #import "AutoTableViewCell.h"
 
+
 @implementation AutoTableViewCell
 
 - (void)awakeFromNib {
@@ -19,6 +20,11 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void)configureWithCar: (Car *) car {
+    self.dateLabel.text = car.modelDate;
+    self.modelNameLabel.text = car.model;
 }
 
 @end

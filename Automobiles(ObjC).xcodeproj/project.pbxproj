@@ -18,6 +18,10 @@
 		FA81920523D82E340010ECE4 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA81920423D82E340010ECE4 /* MainViewController.m */; };
 		FA81920823D835FF0010ECE4 /* AutoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA81920723D835FF0010ECE4 /* AutoTableViewCell.m */; };
 		FA81920B23D84E930010ECE4 /* Networking.m in Sources */ = {isa = PBXBuildFile; fileRef = FA81920A23D84E930010ECE4 /* Networking.m */; };
+		FA81921523D9F38A0010ECE4 /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = FA81921423D9F38A0010ECE4 /* Car.m */; };
+		FA81921823DA0B500010ECE4 /* NSArray+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = FA81921723DA0B500010ECE4 /* NSArray+Utils.m */; };
+		FAACE29023DA37090002B9BB /* CellsHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAACE28F23DA37090002B9BB /* CellsHeaderView.m */; };
+		FAACE29323DA3E2C0002B9BB /* CellsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAACE29223DA3E2C0002B9BB /* CellsHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +48,13 @@
 		FA81920A23D84E930010ECE4 /* Networking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Networking.m; sourceTree = "<group>"; };
 		FA81921123D87D000010ECE4 /* UIViewController+Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Utils.h"; sourceTree = "<group>"; };
 		FA81921223D87D000010ECE4 /* UIViewController+Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Utils.m"; sourceTree = "<group>"; };
+		FA81921323D9F38A0010ECE4 /* Car.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
+		FA81921423D9F38A0010ECE4 /* Car.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
+		FA81921623DA0B500010ECE4 /* NSArray+Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Utils.h"; sourceTree = "<group>"; };
+		FA81921723DA0B500010ECE4 /* NSArray+Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Utils.m"; sourceTree = "<group>"; };
+		FAACE28E23DA37090002B9BB /* CellsHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CellsHeaderView.h; sourceTree = "<group>"; };
+		FAACE28F23DA37090002B9BB /* CellsHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CellsHeaderView.m; sourceTree = "<group>"; };
+		FAACE29223DA3E2C0002B9BB /* CellsHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellsHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +128,8 @@
 		FA8191FF23D8232F0010ECE4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FA81921323D9F38A0010ECE4 /* Car.h */,
+				FA81921423D9F38A0010ECE4 /* Car.m */,
 				FA8191FC23D81AD40010ECE4 /* Brand.h */,
 				FA8191FD23D81AD40010ECE4 /* Brand.m */,
 			);
@@ -127,7 +140,10 @@
 			isa = PBXGroup;
 			children = (
 				FA81920623D835FF0010ECE4 /* AutoTableViewCell.h */,
+				FAACE29223DA3E2C0002B9BB /* CellsHeaderView.xib */,
 				FA81920723D835FF0010ECE4 /* AutoTableViewCell.m */,
+				FAACE28E23DA37090002B9BB /* CellsHeaderView.h */,
+				FAACE28F23DA37090002B9BB /* CellsHeaderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -155,6 +171,8 @@
 			children = (
 				FA81921123D87D000010ECE4 /* UIViewController+Utils.h */,
 				FA81921223D87D000010ECE4 /* UIViewController+Utils.m */,
+				FA81921623DA0B500010ECE4 /* NSArray+Utils.h */,
+				FA81921723DA0B500010ECE4 /* NSArray+Utils.m */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -221,6 +239,7 @@
 				FA8191F323D795840010ECE4 /* LaunchScreen.storyboard in Resources */,
 				FA8191F023D795840010ECE4 /* Assets.xcassets in Resources */,
 				FA8191EE23D795820010ECE4 /* Main.storyboard in Resources */,
+				FAACE29323DA3E2C0002B9BB /* CellsHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,11 +294,14 @@
 			files = (
 				FA81920823D835FF0010ECE4 /* AutoTableViewCell.m in Sources */,
 				FA8191FE23D81AD40010ECE4 /* Brand.m in Sources */,
+				FA81921823DA0B500010ECE4 /* NSArray+Utils.m in Sources */,
 				FA8191E523D795820010ECE4 /* AppDelegate.m in Sources */,
 				FA81920B23D84E930010ECE4 /* Networking.m in Sources */,
 				FA8191F623D795840010ECE4 /* main.m in Sources */,
 				FA81920523D82E340010ECE4 /* MainViewController.m in Sources */,
+				FA81921523D9F38A0010ECE4 /* Car.m in Sources */,
 				FA8191E823D795820010ECE4 /* SceneDelegate.m in Sources */,
+				FAACE29023DA37090002B9BB /* CellsHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

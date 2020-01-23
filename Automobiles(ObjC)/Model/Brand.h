@@ -16,9 +16,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, strong) NSString *name;
 @property(nonatomic, strong) NSArray *founderNames;
 @property(nonatomic, strong) NSString *foundationDate;
+@property(nonatomic, strong) NSArray *cars;
 
 +(Brand*) parseResponse: (id) response;
-
+- (instancetype)initWithCars: (NSArray*) cars brand:(Brand*) brand;
 @end
 
 NS_ASSUME_NONNULL_END

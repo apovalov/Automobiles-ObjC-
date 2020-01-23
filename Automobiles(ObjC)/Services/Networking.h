@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Networking : NSObject
 
 + (void) getBrands: (void(^)(id errorMsg, id response))handler;
-
++ (void) getCars: (void(^)(id errorMsg, id response))handler;
 @end
 
 NS_ASSUME_NONNULL_END

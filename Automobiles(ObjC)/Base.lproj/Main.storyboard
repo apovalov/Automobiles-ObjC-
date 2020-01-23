@@ -39,7 +39,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" systemColor="quaternaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.17999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="wkW-6Z-gVA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="LwS-LB-nTf" secondAttribute="trailing" constant="20" id="ATt-o9-M3A"/>
                                                 <constraint firstAttribute="bottom" secondItem="LwS-LB-nTf" secondAttribute="bottom" constant="11" id="GSP-1a-x3I"/>
