@@ -20,7 +20,7 @@
 @interface MainViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-//@property Networking *networking;
+@property (nonatomic, strong) NSArray *cars;
 
 @end
 
@@ -29,7 +29,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self fetchData];
-    
     // Do any additional setup after loading the view.
 }
 
@@ -37,41 +36,37 @@
     
     __weak MainViewController* weakSelf = self;
     
-    dispatch_group_t fetchDataGroup =dispatch_group_create();
+    dispatch_group_t fetchDataGroup = dispatch_group_create();
     
     dispatch_group_enter(fetchDataGroup);
-    dispatch_group_enter(fetchDataGroup);
-    
     [Networking getBrands:^(id  _Nonnull errorMsg, id  _Nonnull response) {
         if (errorMsg) {
             [weakSelf showAlertWithTitle:@"Ошибка" message:errorMsg];
         } else {
             weakSelf.brands = [NSMutableArray arrayWithArray: response];
-            [weakSelf.tableView reloadData];
         }
+        NSLog(@"Brands: %lu", (unsigned long)weakSelf.brands.count);
         dispatch_group_leave(fetchDataGroup);
     }];
     
+    dispatch_group_enter(fetchDataGroup);
     [Networking getCars:^(id  _Nonnull errorMsg, id  _Nonnull response) {
         if (errorMsg) {
             [weakSelf showAlertWithTitle:@"Ошибка" message:errorMsg];
         } else {
             NSArray<Car *> *cars = response;
-            
-            weakSelf.brands = [weakSelf.brands map:^id _Nonnull(id  _Nonnull obj) {
-                Brand *brand = (Brand *)obj;
-                brand = [[Brand alloc] initWithCars:cars
-                                              brand:brand] ;
-                return brand;
-            }];
-            
-            [weakSelf.tableView reloadData];
+            weakSelf.cars = cars;
         }
         dispatch_group_leave(fetchDataGroup);
     }];
     
     dispatch_group_notify(fetchDataGroup, dispatch_get_main_queue(), ^{
-        NSLog(@"All data fetched!");
+        weakSelf.brands = [weakSelf.brands map:^id _Nonnull(id  _Nonnull obj) {
+            Brand *brand = (Brand *)obj;
+            brand = [[Brand alloc] initWithCars: weakSelf.cars
+                                          brand:brand] ;
+            return brand;
+        }];
         [weakSelf.tableView reloadData];
     });
 }
@@ -84,7 +79,8 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     Brand *brand = [self.brands objectAtIndex: section];
-    return brand.cars != nil ? [brand.cars count] : 0;
+    NSLog(@"NumberOfRowsInSection: %lu", (unsigned long)brand.cars.count);
+    return brand.cars != nil ? brand.cars.count : 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -94,7 +90,6 @@
     
     cell.modelNameLabel.text = car.model;
     cell.dateLabel.text = car.modelDate;
-    
     return cell;
 }
 

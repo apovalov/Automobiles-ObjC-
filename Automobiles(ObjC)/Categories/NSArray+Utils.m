@@ -8,7 +8,7 @@
 
 #import "NSArray+Utils.h"
 
-@implementation NSArray(Utils)
+@implementation NSArray (Utils)
     - (NSArray *)map:(id (^)(id obj))block {
         NSMutableArray *mutableArray = [NSMutableArray new];
         [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {

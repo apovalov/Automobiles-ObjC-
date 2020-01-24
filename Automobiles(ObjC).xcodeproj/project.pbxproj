@@ -120,7 +120,7 @@
 				FA8191F123D795840010ECE4 /* LaunchScreen.storyboard */,
 				FA8191F423D795840010ECE4 /* Info.plist */,
 				FA8191F523D795840010ECE4 /* main.m */,
-				FA81921023D87CF70010ECE4 /* Extensions */,
+				FA81921023D87CF70010ECE4 /* Categories */,
 			);
 			path = "Automobiles(ObjC)";
 			sourceTree = "<group>";
@@ -140,10 +140,10 @@
 			isa = PBXGroup;
 			children = (
 				FA81920623D835FF0010ECE4 /* AutoTableViewCell.h */,
-				FAACE29223DA3E2C0002B9BB /* CellsHeaderView.xib */,
 				FA81920723D835FF0010ECE4 /* AutoTableViewCell.m */,
 				FAACE28E23DA37090002B9BB /* CellsHeaderView.h */,
 				FAACE28F23DA37090002B9BB /* CellsHeaderView.m */,
+				FAACE29223DA3E2C0002B9BB /* CellsHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -166,7 +166,7 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		FA81921023D87CF70010ECE4 /* Extensions */ = {
+		FA81921023D87CF70010ECE4 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
 				FA81921123D87D000010ECE4 /* UIViewController+Utils.h */,
@@ -174,7 +174,7 @@
 				FA81921623DA0B500010ECE4 /* NSArray+Utils.h */,
 				FA81921723DA0B500010ECE4 /* NSArray+Utils.m */,
 			);
-			path = Extensions;
+			path = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

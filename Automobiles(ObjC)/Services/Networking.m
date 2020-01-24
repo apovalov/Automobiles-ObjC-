@@ -18,7 +18,6 @@
 @implementation Networking
 
 + (void) getBrands: (void(^)(id errorMsg, id response))handler {
-    NSLog(@"Something handeling");
     NSString *url = @"http://www.mocky.io/v2/5db959e43000005a005ee206";
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
@@ -31,6 +30,11 @@
             NSMutableArray *brands = [NSMutableArray array];
             NSArray *brands_response = responseObject[@"data"];
             if ([brands_response isKindOfClass:[NSArray class]]) {
+//                [brands_response enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//                    Brand *brand = [Brand parseResponse: obj];
+//                    NSLog(@"brand foundationDate: %@", brand.foundationDate);
+//                    [brands addObject: brand];
+//                }];
                 for (int i = 0; i < brands_response.count; i++) {
                     Brand *brand = [Brand parseResponse: brands_response[i]];
                     [brands addObject: brand];
@@ -47,7 +51,6 @@
 
 + (void) getCars: (void(^)(id errorMsg, id response))handler {
     
-    NSLog(@"Something handeling");
     NSString *url = @"http://www.mocky.io/v2/5db9630530000095005ee272";
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
